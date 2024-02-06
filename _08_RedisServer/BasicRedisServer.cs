@@ -64,29 +64,49 @@ public class BasicRedisServer
         Console.WriteLine("Client disconnected");
     }
 
+    private Dictionary<string,object> _store=new();
+    
     private string HandleCommand(object[] receivedCommand)
     {
+        var respHandler = new RESP();
         if (receivedCommand.Length == 0)
             return "";
         var command = receivedCommand[0].ToString().ToLower();
         switch (command)
         {
             case "ping":
-                return "+PONG\r\n";
+                return respHandler.SingleItemEncodeRESP("PONG", RESP.RespType.SimpleString).EncodedRESP;
             case "echo" when receivedCommand.Length==1:
-                return "-ECHO: wrong number of arguments\r\n";
+                return respHandler.SingleItemEncodeRESP("ECHO: wrong number of arguments", RESP.RespType.SimpleError).EncodedRESP;
             case "echo":
             {
                 var echoMessage = string.Empty;
+                string separator = "";
                 for (int i=1;i<receivedCommand.Length;i++)
                 {
-                    echoMessage+=receivedCommand[i];
+                    echoMessage+=separator+receivedCommand[i];
+                    separator=" ";
                 }
-                echoMessage=$"${echoMessage.Length}\r\n{echoMessage}\r\n";
-                return echoMessage;
+                return respHandler.SingleItemEncodeRESP(echoMessage, RESP.RespType.BulkString).EncodedRESP;
+            }
+            case "set" when receivedCommand.Length!=3:
+                return respHandler.SingleItemEncodeRESP("SET: wrong number of arguments", RESP.RespType.SimpleError).EncodedRESP;
+            case "set":
+            {
+                var key = receivedCommand[1].ToString();
+                var value = receivedCommand[2];
+                _store[key] = value;
+                return respHandler.SingleItemEncodeRESP("OK", RESP.RespType.SimpleString).EncodedRESP;
+            }
+            case "get" when receivedCommand.Length!=2:
+                return respHandler.SingleItemEncodeRESP("GET: wrong number of arguments", RESP.RespType.SimpleError).EncodedRESP;
+            case "get":
+            {
+                var key = receivedCommand[1].ToString();
+                return key != null && _store.TryGetValue(key, out var value) ? respHandler.SingleItemEncodeRESP(value, RESP.RespType.BulkString).EncodedRESP : respHandler.SingleItemEncodeRESP(null, RESP.RespType.BulkString).EncodedRESP;
             }
             default:
-                return $"-Unknown command '{command}'\r\n";
+                return respHandler.SingleItemEncodeRESP("Unknown command", RESP.RespType.SimpleError).EncodedRESP;
         }
     }
 }
