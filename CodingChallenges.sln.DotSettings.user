@@ -2,6 +2,9 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=147950c3_002D72c7_002D49d9_002Da4d5_002Dd0bec63e0893/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;_08A_RedisServerTests&amp;gt; #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/fatigor/RiderProjects/CodingChallenges/_08A_RedisServerTests" Presentation="&amp;lt;_08A_RedisServerTests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5b5d993b_002D15eb_002D4c82_002Dbfe9_002D6b365202c2cf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;_08A_RedisServerTests&amp;gt; #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/fatigor/RiderProjects/CodingChallenges/_08A_RedisServerTests" Presentation="&amp;lt;_08A_RedisServerTests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6d603328_002De38e_002D4491_002D8134_002D022814381eae/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;_08A_RedisServerTests&amp;gt; #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/fatigor/RiderProjects/CodingChallenges/_08A_RedisServerTests" Presentation="&amp;lt;_08A_RedisServerTests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
@@ -9,5 +12,8 @@
   &lt;Project Location="/Users/fatigor/RiderProjects/CodingChallenges/_08A_RedisServerTests" Presentation="&amp;lt;_08A_RedisServerTests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f64e4729_002D89ed_002D4f3b_002Db2f1_002D0f5089206aa6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;_08A_RedisServerTests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/fatigor/RiderProjects/CodingChallenges/_08A_RedisServerTests" Presentation="&amp;lt;_08A_RedisServerTests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f9cb5fd6_002D9476_002D49ef_002D93fa_002Dfe0a94b355c6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;_08A_RedisServerTests&amp;gt; #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/fatigor/RiderProjects/CodingChallenges/_08A_RedisServerTests" Presentation="&amp;lt;_08A_RedisServerTests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
