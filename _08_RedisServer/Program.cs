@@ -10,7 +10,6 @@ var enc3 = resp.SingleItemEncodeRESP(123.456, RESP.RespType.Double);
 var enc4 = resp.SingleItemEncodeRESP(true, RESP.RespType.Boolean);
 var type = RESP.RespType.BulkString;
 Console.WriteLine($"{(char)type}");
-Console.WriteLine("Hello");
 
 var listener=new BasicRedisServer(null);
 await listener.StartServer();
