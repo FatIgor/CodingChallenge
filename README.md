@@ -12,6 +12,8 @@ Did the first one, then decided to do them randomly.
 * 01 - wc
 * 17 - MemCached
 
+**Underway:**
+* 08 - Redis
 &nbsp;  
 
 
